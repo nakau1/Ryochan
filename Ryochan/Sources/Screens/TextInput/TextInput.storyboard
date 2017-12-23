@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wnM-1p-Z1g">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HiraginoMaruGothProN.ttc">
+            <string>HiraMaruProN-W4</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Text Input View Controller-->
+        <scene sceneID="Q38-zU-Twh">
+            <objects>
+                <viewController storyboardIdentifier="StartingLineup" id="wnM-1p-Z1g" customClass="TextInputViewController" customModule="Ryochan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UiR-IX-B2A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRy-GN-oP0">
+                                <rect key="frame" x="16" y="36" width="343" height="20"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ObW-Qr-3nN">
+                                <rect key="frame" x="16" y="192" width="44" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="選手名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="alb-ra-AJb">
+                                <rect key="frame" x="16" y="80" width="343" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="xss-FI-S82"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="name"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="wnM-1p-Z1g" id="iY3-Sb-pbj"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="選手名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KPz-AF-Epg">
+                                <rect key="frame" x="16" y="124" width="343" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ei6-eN-5EL"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="name"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="wnM-1p-Z1g" id="QrV-Io-afS"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0075150697999999405" green="0.0075150697999999405" blue="0.0075150697999999405" alpha="0.87898651538493167" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zRy-GN-oP0" firstAttribute="leading" secondItem="JXi-fx-IQr" secondAttribute="leading" constant="16" id="5ym-8O-sqL"/>
+                            <constraint firstItem="zRy-GN-oP0" firstAttribute="top" secondItem="JXi-fx-IQr" secondAttribute="top" constant="16" id="7ID-65-K4V"/>
+                            <constraint firstItem="alb-ra-AJb" firstAttribute="leading" secondItem="JXi-fx-IQr" secondAttribute="leading" constant="16" id="N8O-jj-Xv0"/>
+                            <constraint firstItem="KPz-AF-Epg" firstAttribute="leading" secondItem="alb-ra-AJb" secondAttribute="leading" id="QoA-RX-pE2"/>
+                            <constraint firstItem="ObW-Qr-3nN" firstAttribute="top" secondItem="KPz-AF-Epg" secondAttribute="bottom" constant="24" id="Sbr-OS-kx0"/>
+                            <constraint firstItem="KPz-AF-Epg" firstAttribute="top" secondItem="alb-ra-AJb" secondAttribute="bottom" id="btE-Fh-ErT"/>
+                            <constraint firstItem="JXi-fx-IQr" firstAttribute="trailing" secondItem="zRy-GN-oP0" secondAttribute="trailing" constant="16" id="f9g-FD-fvs"/>
+                            <constraint firstItem="KPz-AF-Epg" firstAttribute="trailing" secondItem="alb-ra-AJb" secondAttribute="trailing" id="kcE-Xc-6zN"/>
+                            <constraint firstItem="JXi-fx-IQr" firstAttribute="trailing" secondItem="alb-ra-AJb" secondAttribute="trailing" constant="16" id="khS-da-ft8"/>
+                            <constraint firstItem="ObW-Qr-3nN" firstAttribute="leading" secondItem="JXi-fx-IQr" secondAttribute="leading" constant="16" id="oFQ-w8-4GM"/>
+                            <constraint firstItem="alb-ra-AJb" firstAttribute="top" secondItem="zRy-GN-oP0" secondAttribute="bottom" constant="24" id="qiY-PL-nAB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JXi-fx-IQr"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="b5v-xj-zLj"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="ObW-Qr-3nN" id="sYL-t3-tRd"/>
+                        <outlet property="textField1" destination="alb-ra-AJb" id="3ve-St-9qU"/>
+                        <outlet property="textField2" destination="KPz-AF-Epg" id="Fx9-iF-rVs"/>
+                        <outlet property="textField2Height" destination="ei6-eN-5EL" id="Ixf-5a-S9p"/>
+                        <outlet property="titleLabel" destination="zRy-GN-oP0" id="EOf-1w-h8x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e5b-yy-Jl2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="224.80000000000001" y="-214.54272863568218"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wnM-1p-Z1g">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HiraginoMaruGothProN.ttc">
+            <string>HiraMaruProN-W4</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Portrait View Controller-->
+        <scene sceneID="Q38-zU-Twh">
+            <objects>
+                <viewController id="wnM-1p-Z1g" customClass="PortraitViewController" customModule="Ryochan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UiR-IX-B2A">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ku9-gy-nSK">
+                                <rect key="frame" x="0.0" y="399" width="320" height="169"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gEE-3t-3BA">
+                                <rect key="frame" x="0.0" y="399" width="320" height="96"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="Qwg-A0-3oY"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TjB-lH-miI">
+                                    <size key="itemSize" width="96" height="96"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="D84-Dv-aor" customClass="PartsSelectAdapterCell" customModule="Ryochan" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vxa-gm-YBn" customClass="RoundedBorderedView" customModule="Ryochan" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="0.97254901959999995" green="0.36470588240000001" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Gr-zO-uYw">
+                                                    <rect key="frame" x="6" y="6" width="84" height="84"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AL2-5F-Ywg" customClass="HighlightButton" customModule="Ryochan" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
+                                                    <color key="tintColor" red="0.5972993338" green="0.5972993338" blue="0.5972993338" alpha="0.5468214897" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="didTapPartsButton" destination="D84-Dv-aor" eventType="touchUpInside" id="bka-Aw-j70"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="なし" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DK9-n8-6Jv">
+                                                    <rect key="frame" x="36" y="42" width="24" height="12"/>
+                                                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="12"/>
+                                                    <color key="textColor" red="0.97254901959999995" green="0.36470588240000001" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="5Gr-zO-uYw" firstAttribute="leading" secondItem="D84-Dv-aor" secondAttribute="leading" constant="6" id="1vv-Ck-QUQ"/>
+                                            <constraint firstItem="vxa-gm-YBn" firstAttribute="top" secondItem="D84-Dv-aor" secondAttribute="top" id="9TT-PR-Lzz"/>
+                                            <constraint firstItem="DK9-n8-6Jv" firstAttribute="centerX" secondItem="D84-Dv-aor" secondAttribute="centerX" id="G4x-A5-Wqy"/>
+                                            <constraint firstAttribute="bottom" secondItem="AL2-5F-Ywg" secondAttribute="bottom" id="G5U-73-NS7"/>
+                                            <constraint firstAttribute="trailing" secondItem="5Gr-zO-uYw" secondAttribute="trailing" constant="6" id="G63-t9-VeW"/>
+                                            <constraint firstAttribute="bottom" secondItem="5Gr-zO-uYw" secondAttribute="bottom" constant="6" id="JbH-ij-lJb"/>
+                                            <constraint firstItem="5Gr-zO-uYw" firstAttribute="top" secondItem="D84-Dv-aor" secondAttribute="top" constant="6" id="Ked-Yw-rlh"/>
+                                            <constraint firstItem="AL2-5F-Ywg" firstAttribute="leading" secondItem="D84-Dv-aor" secondAttribute="leading" id="M1Y-3X-p2a"/>
+                                            <constraint firstAttribute="trailing" secondItem="vxa-gm-YBn" secondAttribute="trailing" id="NfJ-EP-hdO"/>
+                                            <constraint firstItem="DK9-n8-6Jv" firstAttribute="centerY" secondItem="D84-Dv-aor" secondAttribute="centerY" id="SlV-vT-Rj0"/>
+                                            <constraint firstItem="vxa-gm-YBn" firstAttribute="leading" secondItem="D84-Dv-aor" secondAttribute="leading" id="VHZ-aa-RMT"/>
+                                            <constraint firstItem="AL2-5F-Ywg" firstAttribute="top" secondItem="D84-Dv-aor" secondAttribute="top" id="iAJ-0w-mrw"/>
+                                            <constraint firstAttribute="trailing" secondItem="AL2-5F-Ywg" secondAttribute="trailing" id="tAQ-yh-4rL"/>
+                                            <constraint firstAttribute="bottom" secondItem="vxa-gm-YBn" secondAttribute="bottom" id="ua7-6V-EA7"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="borderedView" destination="vxa-gm-YBn" id="yQN-0z-4zu"/>
+                                            <outlet property="emptyLabel" destination="DK9-n8-6Jv" id="vvG-xV-Xxb"/>
+                                            <outlet property="partsImageView" destination="5Gr-zO-uYw" id="Jeb-8T-38g"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="p6P-o5-CSC" id="3PR-FL-6rH"/>
+                                    <outlet property="delegate" destination="p6P-o5-CSC" id="KNd-LX-euH"/>
+                                </connections>
+                            </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="glS-96-BCU">
+                                <rect key="frame" x="0.0" y="496" width="320" height="72"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="b7G-FH-v91"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="S15-oc-G6R">
+                                    <size key="itemSize" width="72" height="72"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="o2b-kG-buE" customClass="CategorySelectAdapterCell" customModule="Ryochan" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rtf-I4-1Ev" customClass="HighlightButton" customModule="Ryochan" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+                                                    <color key="tintColor" red="0.5972993338" green="0.5972993338" blue="0.5972993338" alpha="0.5468214897" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="didTapCategoryButton" destination="o2b-kG-buE" eventType="touchUpInside" id="8FY-Bm-YXB"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="りんかく" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhw-LH-Q3g">
+                                                    <rect key="frame" x="0.0" y="56" width="72" height="12"/>
+                                                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="12"/>
+                                                    <color key="textColor" red="0.97254901959999995" green="0.36470588240000001" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JiZ-iW-lWg">
+                                                    <rect key="frame" x="10" y="2" width="52" height="52"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="JiZ-iW-lWg" secondAttribute="height" multiplier="1:1" id="tQS-aj-LwC"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="JiZ-iW-lWg" firstAttribute="top" secondItem="o2b-kG-buE" secondAttribute="top" constant="2" id="2lN-rA-Moo"/>
+                                            <constraint firstItem="Rtf-I4-1Ev" firstAttribute="leading" secondItem="o2b-kG-buE" secondAttribute="leading" id="AxT-1t-nte"/>
+                                            <constraint firstItem="Rtf-I4-1Ev" firstAttribute="top" secondItem="o2b-kG-buE" secondAttribute="top" id="Cw8-xY-6uv"/>
+                                            <constraint firstAttribute="trailing" secondItem="Qhw-LH-Q3g" secondAttribute="trailing" id="LoX-zV-W3l"/>
+                                            <constraint firstAttribute="bottom" secondItem="Rtf-I4-1Ev" secondAttribute="bottom" id="anp-rD-3Ke"/>
+                                            <constraint firstAttribute="trailing" secondItem="Rtf-I4-1Ev" secondAttribute="trailing" id="hxJ-dh-9gX"/>
+                                            <constraint firstItem="Qhw-LH-Q3g" firstAttribute="top" secondItem="JiZ-iW-lWg" secondAttribute="bottom" constant="2" id="iJ0-jf-scc"/>
+                                            <constraint firstItem="JiZ-iW-lWg" firstAttribute="centerX" secondItem="o2b-kG-buE" secondAttribute="centerX" id="iUZ-Vu-bGb"/>
+                                            <constraint firstItem="Qhw-LH-Q3g" firstAttribute="leading" secondItem="o2b-kG-buE" secondAttribute="leading" id="tdL-xV-QQq"/>
+                                            <constraint firstAttribute="bottom" secondItem="Qhw-LH-Q3g" secondAttribute="bottom" constant="4" id="uY9-5N-VeL"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="categoryImageView" destination="JiZ-iW-lWg" id="axv-tn-IkF"/>
+                                            <outlet property="nameLabel" destination="Qhw-LH-Q3g" id="yzG-rt-HhX"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="DkG-DC-ll5" id="K8j-0l-NWY"/>
+                                    <outlet property="delegate" destination="DkG-DC-ll5" id="H0M-lC-zp6"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARI-EA-2FK">
+                                <rect key="frame" x="8" y="28" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="Tzu-V6-Aer"/>
+                                    <constraint firstAttribute="height" constant="44" id="lfV-Du-nKu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <state key="normal" title="✕"/>
+                                <connections>
+                                    <action selector="didTapCloseButton" destination="wnM-1p-Z1g" eventType="touchUpInside" id="4A8-dP-DSI"/>
+                                </connections>
+                            </button>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wAf-jv-xZK" customClass="PortraitPreviewView" customModule="Ryochan" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="71" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wAf-jv-xZK" secondAttribute="height" multiplier="1:1" id="Iya-eW-wqh"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GE3-O2-YYX">
+                                <rect key="frame" x="68" y="25" width="184" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="GWN-a3-SKI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapNameButton" destination="wnM-1p-Z1g" eventType="touchUpInside" id="hQk-hp-MnO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihe-QJ-ccg">
+                                <rect key="frame" x="268" y="28" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="0xu-ab-QlB"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="2Ck-Sj-iOi"/>
+                                    <constraint firstAttribute="height" constant="44" id="M6I-ig-MyD"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="fAW-zI-a6I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="設定"/>
+                                <connections>
+                                    <action selector="didTapMenuButton" destination="wnM-1p-Z1g" eventType="touchUpInside" id="pSH-Vg-pe7"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sZy-qj-R9P" customClass="ColorButton" customModule="Ryochan" customModuleProvider="target">
+                                <rect key="frame" x="248" y="327" width="64" height="64"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="7C4-Rz-c2M"/>
+                                    <constraint firstAttribute="height" constant="64" id="elF-Vs-j9v"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="didTapColorButton" destination="wnM-1p-Z1g" eventType="touchUpInside" id="h9N-KF-xjW"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.19215686269999999" green="0.40000000000000002" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wAf-jv-xZK" firstAttribute="leading" secondItem="JXi-fx-IQr" secondAttribute="leading" id="7YO-DZ-Y84"/>
+                            <constraint firstItem="JXi-fx-IQr" firstAttribute="trailing" secondItem="glS-96-BCU" secondAttribute="trailing" id="FD5-bW-DGf"/>
+                            <constraint firstItem="Ku9-gy-nSK" firstAttribute="leading" secondItem="gEE-3t-3BA" secondAttribute="leading" id="GA1-fA-4Rn"/>
+                            <constraint firstItem="Ku9-gy-nSK" firstAttribute="trailing" secondItem="gEE-3t-3BA" secondAttribute="trailing" id="KEv-YT-Xkw"/>
+                            <constraint firstItem="JXi-fx-IQr" firstAttribute="trailing" secondItem="sZy-qj-R9P" secondAttribute="trailing" constant="8" id="LCX-1t-lmu"/>
+                            <constraint firstItem="gEE-3t-3BA" firstAttribute="leading" secondItem="JXi-fx-IQr" secondAttribute="leading" id="SEU-Jd-Wsc"/>
+                            <constraint firstItem="gEE-3t-3BA" firstAttribute="top" secondItem="wAf-jv-xZK" secondAttribute="bottom" constant="8" id="Str-Tl-9pv"/>
+                            <constraint firstItem="GE3-O2-YYX" firstAttribute="centerY" secondItem="ARI-EA-2FK" secondAttribute="centerY" id="VrP-9s-3WK"/>
+                            <constraint firstItem="Ku9-gy-nSK" firstAttribute="bottom" secondItem="glS-96-BCU" secondAttribute="bottom" id="XWz-eo-guY"/>
+                            <constraint firstItem="GE3-O2-YYX" firstAttribute="leading" secondItem="ARI-EA-2FK" secondAttribute="trailing" constant="16" id="ZMs-ef-kvS"/>
+                            <constraint firstItem="ARI-EA-2FK" firstAttribute="leading" secondItem="JXi-fx-IQr" secondAttribute="leading" constant="8" id="Zk8-UU-kPB"/>
+                            <constraint firstItem="Ku9-gy-nSK" firstAttribute="top" secondItem="sZy-qj-R9P" secondAttribute="bottom" constant="8" id="bmo-4l-PWY"/>
+                            <constraint firstItem="ihe-QJ-ccg" firstAttribute="top" secondItem="JXi-fx-IQr" secondAttribute="top" constant="8" id="dgb-KU-hBT"/>
+                            <constraint firstItem="JXi-fx-IQr" firstAttribute="bottom" secondItem="glS-96-BCU" secondAttribute="bottom" id="eEJ-YP-azy"/>
+                            <constraint firstItem="glS-96-BCU" firstAttribute="top" secondItem="gEE-3t-3BA" secondAttribute="bottom" constant="1" id="la7-Ka-68d"/>
+                            <constraint firstItem="JXi-fx-IQr" firstAttribute="trailing" secondItem="ihe-QJ-ccg" secondAttribute="trailing" constant="8" id="n2B-7N-hWQ"/>
+                            <constraint firstItem="JXi-fx-IQr" firstAttribute="trailing" secondItem="gEE-3t-3BA" secondAttribute="trailing" id="opH-x1-9oJ"/>
+                            <constraint firstItem="JXi-fx-IQr" firstAttribute="trailing" secondItem="wAf-jv-xZK" secondAttribute="trailing" id="os3-pv-YJM"/>
+                            <constraint firstItem="Ku9-gy-nSK" firstAttribute="top" secondItem="gEE-3t-3BA" secondAttribute="top" id="qic-gN-A3X"/>
+                            <constraint firstItem="glS-96-BCU" firstAttribute="leading" secondItem="JXi-fx-IQr" secondAttribute="leading" id="sOB-Dz-ML4"/>
+                            <constraint firstItem="ihe-QJ-ccg" firstAttribute="leading" secondItem="GE3-O2-YYX" secondAttribute="trailing" constant="16" id="v10-xh-ttN"/>
+                            <constraint firstItem="ARI-EA-2FK" firstAttribute="top" secondItem="JXi-fx-IQr" secondAttribute="top" constant="8" id="zt8-bK-cJt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JXi-fx-IQr"/>
+                    </view>
+                    <connections>
+                        <outlet property="categoryAdapter" destination="DkG-DC-ll5" id="rFk-T2-Fvg"/>
+                        <outlet property="categoryCollectionView" destination="glS-96-BCU" id="Fzj-yl-w4s"/>
+                        <outlet property="colorButton" destination="sZy-qj-R9P" id="rDo-Ni-W6s"/>
+                        <outlet property="nameButton" destination="GE3-O2-YYX" id="u7t-Ya-f9P"/>
+                        <outlet property="partsAdapter" destination="p6P-o5-CSC" id="THk-fF-KQb"/>
+                        <outlet property="partsCollectionView" destination="gEE-3t-3BA" id="WMN-DP-YON"/>
+                        <outlet property="previewView" destination="wAf-jv-xZK" id="iVe-Qk-e09"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e5b-yy-Jl2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="p6P-o5-CSC" customClass="PartsSelectAdapter" customModule="Ryochan" customModuleProvider="target">
+                    <connections>
+                        <outlet property="collectionView" destination="gEE-3t-3BA" id="Li8-qT-IBz"/>
+                    </connections>
+                </customObject>
+                <customObject id="DkG-DC-ll5" customClass="CategorySelectAdapter" customModule="Ryochan" customModuleProvider="target">
+                    <connections>
+                        <outlet property="collectionView" destination="glS-96-BCU" id="nzw-bl-PBG"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="88.125" y="141.5492957746479"/>
+        </scene>
+    </scenes>
+</document>

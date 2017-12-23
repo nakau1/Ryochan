@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RXD-TA-gnc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HiraginoMaruGothProN.ttc">
+            <string>HiraMaruProN-W4</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Alert Dialog View Controller-->
+        <scene sceneID="5si-l2-bve">
+            <objects>
+                <viewController id="RXD-TA-gnc" customClass="AlertDialogViewController" customModule="Ryochan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bZa-vn-49S">
+                        <rect key="frame" x="0.0" y="0.0" width="288" height="160"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b89-Hg-iva" customClass="RoundedBorderedView" customModule="Ryochan" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="288" height="160"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メッセージ" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNl-2p-JSq">
+                                        <rect key="frame" x="16" y="24" width="256" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="F1o-rh-C9h"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="18"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNs-Eq-BhJ" customClass="HighlightButton" customModule="Ryochan" customModuleProvider="target">
+                                        <rect key="frame" x="152" y="100" width="120" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="N0r-nv-ozn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="18"/>
+                                        <color key="tintColor" red="0.085640069799999996" green="0.085640069799999996" blue="0.085640069799999996" alpha="0.5468214897" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="OK"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="normalBackgroundColor">
+                                                <color key="value" red="0.3803921569" green="0.64313725489999995" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapRightButton" destination="RXD-TA-gnc" eventType="touchUpInside" id="gcN-7S-Xl0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXJ-aA-1Il" customClass="HighlightButton" customModule="Ryochan" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="100" width="120" height="44"/>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="18"/>
+                                        <color key="tintColor" red="0.085640069799999996" green="0.085640069799999996" blue="0.085640069799999996" alpha="0.5468214897" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="キャンセル"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="normalBackgroundColor">
+                                                <color key="value" red="0.92549020049999997" green="0.23529411850000001" blue="0.1019607857" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapLeftButton" destination="RXD-TA-gnc" eventType="touchUpInside" id="d42-T7-dhA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="lNs-Eq-BhJ" firstAttribute="bottom" secondItem="TXJ-aA-1Il" secondAttribute="bottom" id="7g2-u8-6bf"/>
+                                    <constraint firstAttribute="trailing" secondItem="yNl-2p-JSq" secondAttribute="trailing" constant="16" id="OcB-b8-nIs"/>
+                                    <constraint firstItem="lNs-Eq-BhJ" firstAttribute="width" secondItem="TXJ-aA-1Il" secondAttribute="width" id="boq-VI-mXc"/>
+                                    <constraint firstItem="lNs-Eq-BhJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="yNl-2p-JSq" secondAttribute="bottom" constant="24" id="dov-zs-nUY"/>
+                                    <constraint firstAttribute="trailing" secondItem="lNs-Eq-BhJ" secondAttribute="trailing" constant="16" id="iGe-FP-93q"/>
+                                    <constraint firstAttribute="bottom" secondItem="lNs-Eq-BhJ" secondAttribute="bottom" constant="16" id="tl1-ZT-5tZ"/>
+                                    <constraint firstItem="lNs-Eq-BhJ" firstAttribute="leading" secondItem="TXJ-aA-1Il" secondAttribute="trailing" constant="16" id="uGZ-mk-E1l"/>
+                                    <constraint firstItem="lNs-Eq-BhJ" firstAttribute="top" secondItem="TXJ-aA-1Il" secondAttribute="top" id="vzm-jH-Rcr"/>
+                                    <constraint firstItem="yNl-2p-JSq" firstAttribute="top" secondItem="b89-Hg-iva" secondAttribute="top" constant="24" id="wfL-3D-1V3"/>
+                                    <constraint firstItem="yNl-2p-JSq" firstAttribute="leading" secondItem="b89-Hg-iva" secondAttribute="leading" constant="16" id="xMQ-s9-IB1"/>
+                                    <constraint firstItem="TXJ-aA-1Il" firstAttribute="leading" secondItem="b89-Hg-iva" secondAttribute="leading" constant="16" id="yB8-ZI-5T0"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b89-Hg-iva" firstAttribute="leading" secondItem="QGo-8K-Cbc" secondAttribute="leading" id="CXJ-PE-uPX"/>
+                            <constraint firstItem="QGo-8K-Cbc" firstAttribute="bottom" secondItem="b89-Hg-iva" secondAttribute="bottom" id="JMb-T9-wZc"/>
+                            <constraint firstItem="b89-Hg-iva" firstAttribute="top" secondItem="QGo-8K-Cbc" secondAttribute="top" id="asU-be-Dij"/>
+                            <constraint firstItem="b89-Hg-iva" firstAttribute="trailing" secondItem="QGo-8K-Cbc" secondAttribute="trailing" id="t9G-tr-EmU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QGo-8K-Cbc"/>
+                    </view>
+                    <size key="freeformSize" width="288" height="160"/>
+                    <connections>
+                        <outlet property="leftButton" destination="TXJ-aA-1Il" id="6wP-nY-NSd"/>
+                        <outlet property="messageLabel" destination="yNl-2p-JSq" id="isz-3l-OoP"/>
+                        <outlet property="rightButton" destination="lNs-Eq-BhJ" id="Zqq-PL-psD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Wj-gT-wUJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-185.59999999999999" y="174.51274362818592"/>
+        </scene>
+    </scenes>
+</document>

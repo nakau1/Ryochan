@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T84-6u-JGD">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HiraginoMaruGothProN.ttc">
+            <string>HiraMaruProN-W4</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Uniform Select View Controller-->
+        <scene sceneID="Atb-oB-1Xk">
+            <objects>
+                <viewController id="T84-6u-JGD" customClass="UniformSelectViewController" customModule="Ryochan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G0i-9F-gxe" customClass="RoundedBorderedView" customModule="Ryochan" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="460"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xt8-3B-A5L">
+                                <rect key="frame" x="0.0" y="76" width="300" height="376"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iEV-J8-bZY">
+                                    <size key="itemSize" width="285" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="K6P-6M-VI9" customClass="UniformSelectAdapterCell" customModule="Ryochan" customModuleProvider="target">
+                                        <rect key="frame" x="7.5" y="0.0" width="285" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="285" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample-uniform" translatesAutoresizingMaskIntoConstraints="NO" id="kIA-43-fZB">
+                                                    <rect key="frame" x="8" y="8" width="84" height="84"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="kIA-43-fZB" secondAttribute="height" multiplier="1:1" id="alX-Vh-iXo"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="佐々木勇人" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Am-so-nQ5">
+                                                    <rect key="frame" x="108" y="42" width="161" height="16"/>
+                                                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zcQ-8O-gyy" customClass="RoundedBorderedView" customModule="Ryochan" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="285" height="100"/>
+                                                    <color key="backgroundColor" red="0.88235294117647056" green="0.8901960784313725" blue="0.8901960784313725" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="0.97254901959999995" green="0.36470588240000001" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBU-ZY-c5l" customClass="HighlightButton" customModule="Ryochan" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="285" height="100"/>
+                                                    <color key="tintColor" red="0.5972993338" green="0.5972993338" blue="0.5972993338" alpha="0.5468214897" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="didTapButton" destination="K6P-6M-VI9" eventType="touchUpInside" id="8X6-Wa-eMz"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="1Am-so-nQ5" firstAttribute="centerY" secondItem="kIA-43-fZB" secondAttribute="centerY" id="2Zl-Jd-gOz"/>
+                                            <constraint firstAttribute="bottom" secondItem="kIA-43-fZB" secondAttribute="bottom" constant="8" id="9eD-vS-8a1"/>
+                                            <constraint firstItem="kIA-43-fZB" firstAttribute="top" secondItem="K6P-6M-VI9" secondAttribute="top" constant="8" id="Iup-mG-HuF"/>
+                                            <constraint firstAttribute="trailing" secondItem="1Am-so-nQ5" secondAttribute="trailing" constant="16" id="MGl-qA-6PB"/>
+                                            <constraint firstItem="iBU-ZY-c5l" firstAttribute="leading" secondItem="zcQ-8O-gyy" secondAttribute="leading" id="VNo-6r-EbL"/>
+                                            <constraint firstItem="zcQ-8O-gyy" firstAttribute="leading" secondItem="K6P-6M-VI9" secondAttribute="leading" id="W32-EZ-5n0"/>
+                                            <constraint firstItem="iBU-ZY-c5l" firstAttribute="trailing" secondItem="zcQ-8O-gyy" secondAttribute="trailing" id="XAI-cQ-bZP"/>
+                                            <constraint firstItem="kIA-43-fZB" firstAttribute="leading" secondItem="K6P-6M-VI9" secondAttribute="leading" constant="8" id="ayU-iy-mdq"/>
+                                            <constraint firstItem="1Am-so-nQ5" firstAttribute="leading" secondItem="kIA-43-fZB" secondAttribute="trailing" constant="16" id="jZN-jh-ZyP"/>
+                                            <constraint firstAttribute="trailing" secondItem="zcQ-8O-gyy" secondAttribute="trailing" id="kon-LY-JRi"/>
+                                            <constraint firstAttribute="bottom" secondItem="zcQ-8O-gyy" secondAttribute="bottom" id="qIz-MX-o8N"/>
+                                            <constraint firstItem="iBU-ZY-c5l" firstAttribute="bottom" secondItem="zcQ-8O-gyy" secondAttribute="bottom" id="uMG-w6-dKE"/>
+                                            <constraint firstItem="zcQ-8O-gyy" firstAttribute="top" secondItem="K6P-6M-VI9" secondAttribute="top" id="wWd-2v-A2X"/>
+                                            <constraint firstItem="iBU-ZY-c5l" firstAttribute="top" secondItem="zcQ-8O-gyy" secondAttribute="top" id="wlz-Kv-NaP"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="maskedView" destination="zcQ-8O-gyy" id="9No-9W-BKO"/>
+                                            <outlet property="nameLabel" destination="1Am-so-nQ5" id="COc-Ih-IL0"/>
+                                            <outlet property="thumbImageView" destination="kIA-43-fZB" id="WuJ-Ud-NhQ"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="alP-l9-Qic" id="IOA-UL-qa7"/>
+                                    <outlet property="delegate" destination="alP-l9-Qic" id="Ahh-Vm-BcF"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ユニフォームをえらんでください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92v-15-C3Y">
+                                <rect key="frame" x="16" y="30" width="268" height="16"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xt8-3B-A5L" firstAttribute="trailing" secondItem="J03-Ge-u7E" secondAttribute="trailing" id="9Al-aG-yI1"/>
+                            <constraint firstItem="xt8-3B-A5L" firstAttribute="leading" secondItem="J03-Ge-u7E" secondAttribute="leading" id="9ct-Td-qFn"/>
+                            <constraint firstItem="J03-Ge-u7E" firstAttribute="bottom" secondItem="xt8-3B-A5L" secondAttribute="bottom" constant="8" id="Bqe-CE-s8K"/>
+                            <constraint firstItem="J03-Ge-u7E" firstAttribute="trailing" secondItem="92v-15-C3Y" secondAttribute="trailing" constant="16" id="kCM-Pg-zgR"/>
+                            <constraint firstItem="92v-15-C3Y" firstAttribute="top" secondItem="J03-Ge-u7E" secondAttribute="top" constant="30" id="lJV-c6-CaH"/>
+                            <constraint firstItem="xt8-3B-A5L" firstAttribute="top" secondItem="92v-15-C3Y" secondAttribute="bottom" constant="30" id="ndz-Xk-0jl"/>
+                            <constraint firstItem="92v-15-C3Y" firstAttribute="leading" secondItem="J03-Ge-u7E" secondAttribute="leading" constant="16" id="nqv-8y-LZW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="J03-Ge-u7E"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="460"/>
+                    <connections>
+                        <outlet property="adapter" destination="alP-l9-Qic" id="lMS-ag-fBZ"/>
+                        <outlet property="collectionView" destination="xt8-3B-A5L" id="fjD-xz-pZd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ot-Jp-AbG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="alP-l9-Qic" customClass="UniformSelectAdapter" customModule="Ryochan" customModuleProvider="target">
+                    <connections>
+                        <outlet property="collectionView" destination="xt8-3B-A5L" id="gtq-iN-jrH"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="184" y="-144.82758620689657"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sample-uniform" width="457" height="337"/>
+    </resources>
+</document>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vnB-Eu-Kgd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HiraginoMaruGothProN.ttc">
+            <string>HiraMaruProN-W4</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Value Select View Controller-->
+        <scene sceneID="KJK-MJ-qcD">
+            <objects>
+                <viewController id="vnB-Eu-Kgd" customClass="ValueSelectViewController" customModule="Ryochan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ixj-GV-Ev3" customClass="RoundedBorderedView" customModule="Ryochan" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6EN-Qs-Rek">
+                                <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="mxB-fG-05H"/>
+                                    <constraint firstAttribute="height" constant="44" id="pUu-Up-bGW"/>
+                                </constraints>
+                                <state key="normal" title="&lt;"/>
+                                <connections>
+                                    <action selector="didTapBackButton" destination="vnB-Eu-Kgd" eventType="touchUpInside" id="hEV-EO-mko"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jWW-TI-Ul1">
+                                <rect key="frame" x="0.0" y="45" width="320" height="255"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="eu2-0W-cn6" style="IBUITableViewCellStyleDefault" id="Be6-pE-Fjl">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Be6-pE-Fjl" id="xdW-j9-toN">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eu2-0W-cn6">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vnB-Eu-Kgd" id="Okq-Nt-wQX"/>
+                                    <outlet property="delegate" destination="vnB-Eu-Kgd" id="DZp-2e-mne"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MuF-5K-aOj">
+                                <rect key="frame" x="0.0" y="44" width="320" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Rc5-H5-dei"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jWW-TI-Ul1" firstAttribute="top" secondItem="MuF-5K-aOj" secondAttribute="bottom" id="0r9-o8-01C"/>
+                            <constraint firstItem="6EN-Qs-Rek" firstAttribute="top" secondItem="hGT-b7-aoK" secondAttribute="top" id="AsB-H7-8Oc"/>
+                            <constraint firstItem="hGT-b7-aoK" firstAttribute="bottom" secondItem="jWW-TI-Ul1" secondAttribute="bottom" id="Gza-6c-xsG"/>
+                            <constraint firstItem="6EN-Qs-Rek" firstAttribute="leading" secondItem="hGT-b7-aoK" secondAttribute="leading" id="H0V-pe-Phw"/>
+                            <constraint firstItem="jWW-TI-Ul1" firstAttribute="leading" secondItem="hGT-b7-aoK" secondAttribute="leading" id="Mym-gK-l3x"/>
+                            <constraint firstItem="MuF-5K-aOj" firstAttribute="top" secondItem="6EN-Qs-Rek" secondAttribute="bottom" id="YrQ-ZA-5NP"/>
+                            <constraint firstItem="MuF-5K-aOj" firstAttribute="leading" secondItem="hGT-b7-aoK" secondAttribute="leading" id="a1Z-4w-jEE"/>
+                            <constraint firstItem="hGT-b7-aoK" firstAttribute="trailing" secondItem="MuF-5K-aOj" secondAttribute="trailing" id="daZ-nj-g2r"/>
+                            <constraint firstAttribute="trailing" secondItem="jWW-TI-Ul1" secondAttribute="trailing" id="kzK-30-SUW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hGT-b7-aoK"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="300"/>
+                    <connections>
+                        <outlet property="tableView" destination="jWW-TI-Ul1" id="ela-po-axq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ngX-pY-ldV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57.600000000000001" y="-196.10194902548727"/>
+        </scene>
+    </scenes>
+</document>

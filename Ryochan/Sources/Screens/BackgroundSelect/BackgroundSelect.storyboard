@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T84-6u-JGD">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HiraginoMaruGothProN.ttc">
+            <string>HiraMaruProN-W4</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Background Select View Controller-->
+        <scene sceneID="Atb-oB-1Xk">
+            <objects>
+                <viewController id="T84-6u-JGD" customClass="BackgroundSelectViewController" customModule="Ryochan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G0i-9F-gxe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xt8-3B-A5L">
+                                <rect key="frame" x="16" y="68" width="343" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="p8q-Ai-TEI"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iEV-J8-bZY">
+                                    <size key="itemSize" width="66" height="88"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="K6P-6M-VI9" customClass="BackgroundSelectAdapterCell" customModule="Ryochan" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="6" width="66" height="88"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="66" height="88"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fep-gB-CJw">
+                                                    <rect key="frame" x="0.0" y="0.0" width="66" height="88"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Fb-sj-REF" customClass="RoundedBorderedView" customModule="Ryochan" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="66" height="88"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PeU-wm-Bcm" customClass="HighlightButton" customModule="Ryochan" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="66" height="88"/>
+                                                    <color key="tintColor" red="0.38629149415226804" green="0.71725622477499207" blue="1" alpha="0.65475171232876717" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="didTapButton" destination="K6P-6M-VI9" eventType="touchUpInside" id="yXY-u1-2bv"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Fep-gB-CJw" firstAttribute="bottom" secondItem="PeU-wm-Bcm" secondAttribute="bottom" id="ADW-j1-2g8"/>
+                                            <constraint firstItem="Fep-gB-CJw" firstAttribute="top" secondItem="K6P-6M-VI9" secondAttribute="top" id="GJs-it-hFl"/>
+                                            <constraint firstItem="0Fb-sj-REF" firstAttribute="bottom" secondItem="Fep-gB-CJw" secondAttribute="bottom" id="JGn-Xc-J6m"/>
+                                            <constraint firstAttribute="trailing" secondItem="Fep-gB-CJw" secondAttribute="trailing" id="JJs-2h-tig"/>
+                                            <constraint firstAttribute="bottom" secondItem="Fep-gB-CJw" secondAttribute="bottom" id="JWO-XM-wJB"/>
+                                            <constraint firstItem="Fep-gB-CJw" firstAttribute="trailing" secondItem="PeU-wm-Bcm" secondAttribute="trailing" id="MEV-XP-PgE"/>
+                                            <constraint firstItem="0Fb-sj-REF" firstAttribute="top" secondItem="Fep-gB-CJw" secondAttribute="top" id="Pca-ez-HSi"/>
+                                            <constraint firstItem="Fep-gB-CJw" firstAttribute="leading" secondItem="PeU-wm-Bcm" secondAttribute="leading" id="Rmp-FG-Ogb"/>
+                                            <constraint firstItem="Fep-gB-CJw" firstAttribute="top" secondItem="PeU-wm-Bcm" secondAttribute="top" id="Ubp-Qs-SXp"/>
+                                            <constraint firstItem="0Fb-sj-REF" firstAttribute="trailing" secondItem="Fep-gB-CJw" secondAttribute="trailing" id="wdE-52-rwY"/>
+                                            <constraint firstItem="Fep-gB-CJw" firstAttribute="leading" secondItem="K6P-6M-VI9" secondAttribute="leading" id="yxs-cD-RBR"/>
+                                            <constraint firstItem="0Fb-sj-REF" firstAttribute="leading" secondItem="Fep-gB-CJw" secondAttribute="leading" id="zH5-ql-GsL"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="maskedView" destination="0Fb-sj-REF" id="p5c-r5-mUu"/>
+                                            <outlet property="thumbImageView" destination="Fep-gB-CJw" id="p9Z-HW-zAp"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="alP-l9-Qic" id="IOA-UL-qa7"/>
+                                    <outlet property="delegate" destination="alP-l9-Qic" id="Ahh-Vm-BcF"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="はいけいをえらんでください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nqq-3t-77K">
+                                <rect key="frame" x="16" y="36" width="206.5" height="16"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z85-Wl-UoG">
+                                <rect key="frame" x="43" y="184" width="290" height="387"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Z85-Wl-UoG" secondAttribute="height" multiplier="3:4" id="SLY-Iz-A13"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxI-jD-6ec" userLabel="編集ボタンのカバー" customClass="HighlightButton" customModule="Ryochan" customModuleProvider="target">
+                                <rect key="frame" x="259" y="587" width="100" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="90w-i6-gzR"/>
+                                    <constraint firstAttribute="height" constant="64" id="ZB3-of-lYT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="18"/>
+                                <color key="tintColor" red="0.97254901959999995" green="0.36470588240000001" blue="0.57254901960000004" alpha="0.69962007709999996" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="保存">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.29803921570000003" green="0.6588235294" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapSaveButton" destination="T84-6u-JGD" eventType="touchUpInside" id="nWS-3Y-KCr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohd-Vk-I3I" userLabel="編集ボタンのカバー" customClass="HighlightButton" customModule="Ryochan" customModuleProvider="target">
+                                <rect key="frame" x="143" y="587" width="100" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="QEY-oJ-Ivj"/>
+                                    <constraint firstAttribute="width" constant="100" id="sW9-hv-1uE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="18"/>
+                                <color key="tintColor" red="0.97254901959999995" green="0.36470588240000001" blue="0.57254901960000004" alpha="0.69962007709999996" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="共有">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.29803921570000003" green="0.6588235294" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapShareButton" destination="T84-6u-JGD" eventType="touchUpInside" id="d0w-RW-Sh1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xt8-3B-A5L" firstAttribute="leading" secondItem="J03-Ge-u7E" secondAttribute="leading" constant="16" id="0UB-Z5-EE2"/>
+                            <constraint firstItem="Nqq-3t-77K" firstAttribute="leading" secondItem="J03-Ge-u7E" secondAttribute="leading" constant="16" id="52s-rP-MxB"/>
+                            <constraint firstItem="Z85-Wl-UoG" firstAttribute="centerX" secondItem="G0i-9F-gxe" secondAttribute="centerX" id="8bF-Dh-BO3"/>
+                            <constraint firstItem="J03-Ge-u7E" firstAttribute="bottom" secondItem="GxI-jD-6ec" secondAttribute="bottom" constant="16" id="Apu-Bk-9QP"/>
+                            <constraint firstItem="Nqq-3t-77K" firstAttribute="top" secondItem="J03-Ge-u7E" secondAttribute="top" constant="16" id="Cr8-er-YUU"/>
+                            <constraint firstItem="J03-Ge-u7E" firstAttribute="trailing" secondItem="xt8-3B-A5L" secondAttribute="trailing" constant="16" id="DQj-0Y-TLV"/>
+                            <constraint firstItem="GxI-jD-6ec" firstAttribute="top" secondItem="Z85-Wl-UoG" secondAttribute="bottom" constant="16" id="L0y-AC-tI4"/>
+                            <constraint firstItem="GxI-jD-6ec" firstAttribute="bottom" secondItem="ohd-Vk-I3I" secondAttribute="bottom" id="k0m-j9-Ybz"/>
+                            <constraint firstItem="J03-Ge-u7E" firstAttribute="trailing" secondItem="GxI-jD-6ec" secondAttribute="trailing" constant="16" id="m8E-91-U5M"/>
+                            <constraint firstItem="xt8-3B-A5L" firstAttribute="top" secondItem="Nqq-3t-77K" secondAttribute="bottom" constant="16" id="n8e-wv-gUl"/>
+                            <constraint firstItem="Z85-Wl-UoG" firstAttribute="top" secondItem="xt8-3B-A5L" secondAttribute="bottom" constant="16" id="rcN-GG-Pmg"/>
+                            <constraint firstItem="GxI-jD-6ec" firstAttribute="leading" secondItem="ohd-Vk-I3I" secondAttribute="trailing" constant="16" id="vvU-BA-pPz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="J03-Ge-u7E"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="adapter" destination="alP-l9-Qic" id="lMS-ag-fBZ"/>
+                        <outlet property="collectionView" destination="xt8-3B-A5L" id="fjD-xz-pZd"/>
+                        <outlet property="previewView" destination="Z85-Wl-UoG" id="FCK-2M-eQK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ot-Jp-AbG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="alP-l9-Qic" customClass="BackgroundSelectAdapter" customModule="Ryochan" customModuleProvider="target">
+                    <connections>
+                        <outlet property="collectionView" destination="xt8-3B-A5L" id="gtq-iN-jrH"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="183.19999999999999" y="-145.27736131934034"/>
+        </scene>
+    </scenes>
+</document>

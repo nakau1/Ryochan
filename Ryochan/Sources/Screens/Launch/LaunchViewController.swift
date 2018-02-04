@@ -16,6 +16,7 @@ class LaunchViewController: ViewController {
             manager.migrate()
         }
         
-        present(crossDissolve: TopViewController.create())
+        present(crossDissolve: Top2ViewController.create())
+        //present(crossDissolve: TopViewController.create())
     }
 }

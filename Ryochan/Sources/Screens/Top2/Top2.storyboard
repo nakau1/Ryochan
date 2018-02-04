@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wnM-1p-Z1g">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HiraginoMaruGothProN.ttc">
+            <string>HiraMaruProN-W4</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Top2 View Controller-->
+        <scene sceneID="Q38-zU-Twh">
+            <objects>
+                <viewController id="wnM-1p-Z1g" customClass="Top2ViewController" customModule="Ryochan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UiR-IX-B2A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DeM-nI-Z9r" customClass="HighlightButton" customModule="Ryochan" customModuleProvider="target">
+                                <rect key="frame" x="301.5" y="593.5" width="65.5" height="65.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DeM-nI-Z9r" secondAttribute="height" multiplier="1:1" id="gKc-n1-AFZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
+                                <state key="normal" title="フォメ">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalBackgroundColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWc-jO-xen" customClass="HighlightButton" customModule="Ryochan" customModuleProvider="target">
+                                <rect key="frame" x="155" y="593.5" width="65" height="65.5"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
+                                <state key="normal" title="Out">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalBackgroundColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2q-fE-CKa" customClass="HighlightButton" customModule="Ryochan" customModuleProvider="target">
+                                <rect key="frame" x="228" y="593.5" width="65.5" height="65.5"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
+                                <state key="normal" title="画像">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalBackgroundColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4k-G1-ykm" customClass="HighlightButton" customModule="Ryochan" customModuleProvider="target">
+                                <rect key="frame" x="8" y="593.5" width="65.5" height="65.5"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
+                                <state key="normal" title="ユニ">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalBackgroundColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VI8-Ce-6gY" customClass="PagingImageView" customModule="Ryochan" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="557.5"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G99-91-9xG" customClass="HighlightButton" customModule="Ryochan" customModuleProvider="target">
+                                <rect key="frame" x="81.5" y="593.5" width="65.5" height="65.5"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
+                                <state key="normal" title="IN">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalBackgroundColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.19215686269999999" green="0.40000000000000002" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="G99-91-9xG" firstAttribute="bottom" secondItem="r4k-G1-ykm" secondAttribute="bottom" id="00K-yP-1RP"/>
+                            <constraint firstItem="VI8-Ce-6gY" firstAttribute="top" secondItem="JXi-fx-IQr" secondAttribute="top" constant="8" id="1HM-bS-PwC"/>
+                            <constraint firstItem="DeM-nI-Z9r" firstAttribute="top" secondItem="VI8-Ce-6gY" secondAttribute="bottom" constant="8" id="1Sx-Cz-Tfi"/>
+                            <constraint firstItem="n2q-fE-CKa" firstAttribute="height" secondItem="r4k-G1-ykm" secondAttribute="height" id="23t-a5-9y8"/>
+                            <constraint firstItem="DeM-nI-Z9r" firstAttribute="width" secondItem="r4k-G1-ykm" secondAttribute="width" id="4zU-WV-4hq"/>
+                            <constraint firstItem="cWc-jO-xen" firstAttribute="height" secondItem="r4k-G1-ykm" secondAttribute="height" id="5Y0-pP-ahz"/>
+                            <constraint firstItem="G99-91-9xG" firstAttribute="width" secondItem="r4k-G1-ykm" secondAttribute="width" id="AVX-nZ-F8T"/>
+                            <constraint firstItem="JXi-fx-IQr" firstAttribute="trailing" secondItem="DeM-nI-Z9r" secondAttribute="trailing" constant="8" id="EOI-bL-42D"/>
+                            <constraint firstItem="n2q-fE-CKa" firstAttribute="bottom" secondItem="r4k-G1-ykm" secondAttribute="bottom" id="HiZ-1T-Sg9"/>
+                            <constraint firstItem="JXi-fx-IQr" firstAttribute="bottom" secondItem="DeM-nI-Z9r" secondAttribute="bottom" constant="8" id="PQY-P5-NEh"/>
+                            <constraint firstItem="DeM-nI-Z9r" firstAttribute="bottom" secondItem="r4k-G1-ykm" secondAttribute="bottom" id="SDI-Fb-QCz"/>
+                            <constraint firstItem="cWc-jO-xen" firstAttribute="leading" secondItem="G99-91-9xG" secondAttribute="trailing" constant="8" id="TLH-nq-G5p"/>
+                            <constraint firstItem="G99-91-9xG" firstAttribute="height" secondItem="r4k-G1-ykm" secondAttribute="height" id="Ueh-k1-mGh"/>
+                            <constraint firstItem="JXi-fx-IQr" firstAttribute="trailing" secondItem="VI8-Ce-6gY" secondAttribute="trailing" id="X9u-bn-9hn"/>
+                            <constraint firstItem="G99-91-9xG" firstAttribute="leading" secondItem="r4k-G1-ykm" secondAttribute="trailing" constant="8" id="ZkP-hK-eSA"/>
+                            <constraint firstItem="n2q-fE-CKa" firstAttribute="leading" secondItem="cWc-jO-xen" secondAttribute="trailing" constant="8" id="anV-PL-Grg"/>
+                            <constraint firstItem="r4k-G1-ykm" firstAttribute="leading" secondItem="JXi-fx-IQr" secondAttribute="leading" constant="8" id="cvn-FA-osQ"/>
+                            <constraint firstItem="VI8-Ce-6gY" firstAttribute="leading" secondItem="JXi-fx-IQr" secondAttribute="leading" id="g3l-Dj-wjX"/>
+                            <constraint firstItem="DeM-nI-Z9r" firstAttribute="height" secondItem="r4k-G1-ykm" secondAttribute="height" id="hv8-G2-Rnj"/>
+                            <constraint firstItem="cWc-jO-xen" firstAttribute="bottom" secondItem="r4k-G1-ykm" secondAttribute="bottom" id="k6v-gv-GZD"/>
+                            <constraint firstItem="DeM-nI-Z9r" firstAttribute="leading" secondItem="n2q-fE-CKa" secondAttribute="trailing" constant="8" id="rsy-kC-Gx1"/>
+                            <constraint firstItem="cWc-jO-xen" firstAttribute="width" secondItem="r4k-G1-ykm" secondAttribute="width" id="soj-Fh-TpO"/>
+                            <constraint firstItem="n2q-fE-CKa" firstAttribute="width" secondItem="r4k-G1-ykm" secondAttribute="width" id="z0E-Ve-Neb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JXi-fx-IQr"/>
+                    </view>
+                    <connections>
+                        <outlet property="pagingImageView" destination="VI8-Ce-6gY" id="QM5-x5-bR1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e5b-yy-Jl2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-769" y="35"/>
+        </scene>
+    </scenes>
+</document>

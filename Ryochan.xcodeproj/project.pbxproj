@@ -16,6 +16,9 @@
 		DB6FF5F82014973D001290A4 /* FormationStartingLineupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6FF5F42014973C001290A4 /* FormationStartingLineupViewController.swift */; };
 		DB6FF5FA2014ABD0001290A4 /* FormationPositionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6FF5F92014ABD0001290A4 /* FormationPositionView.swift */; };
 		DB6FF5FC2014CBD1001290A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6FF5FB2014CBD0001290A4 /* ViewController.swift */; };
+		DB76702B2025FD16000B384D /* Top2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB7670292025FD16000B384D /* Top2.storyboard */; };
+		DB76702C2025FD16000B384D /* Top2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB76702A2025FD16000B384D /* Top2ViewController.swift */; };
+		DB76702E20260403000B384D /* PagingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB76702D20260402000B384D /* PagingImageView.swift */; };
 		DB78D91C1FF2C68100945BEF /* Parts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB78D91B1FF2C68100945BEF /* Parts.swift */; };
 		DB78D9361FF33ABC00945BEF /* MigrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB78D9351FF33ABC00945BEF /* MigrationManager.swift */; };
 		DB78D93A1FF3465200945BEF /* TopAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB78D9391FF3465200945BEF /* TopAdapter.swift */; };
@@ -148,6 +151,9 @@
 		DB6FF5F42014973C001290A4 /* FormationStartingLineupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormationStartingLineupViewController.swift; sourceTree = "<group>"; };
 		DB6FF5F92014ABD0001290A4 /* FormationPositionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormationPositionView.swift; sourceTree = "<group>"; };
 		DB6FF5FB2014CBD0001290A4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DB7670292025FD16000B384D /* Top2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Top2.storyboard; sourceTree = "<group>"; };
+		DB76702A2025FD16000B384D /* Top2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Top2ViewController.swift; sourceTree = "<group>"; };
+		DB76702D20260402000B384D /* PagingImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingImageView.swift; sourceTree = "<group>"; };
 		DB78D91B1FF2C68100945BEF /* Parts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parts.swift; sourceTree = "<group>"; };
 		DB78D9351FF33ABC00945BEF /* MigrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationManager.swift; sourceTree = "<group>"; };
 		DB78D9391FF3465200945BEF /* TopAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAdapter.swift; sourceTree = "<group>"; };
@@ -313,6 +319,16 @@
 			path = Formation;
 			sourceTree = "<group>";
 		};
+		DB7670282025FD16000B384D /* Top2 */ = {
+			isa = PBXGroup;
+			children = (
+				DB7670292025FD16000B384D /* Top2.storyboard */,
+				DB76702D20260402000B384D /* PagingImageView.swift */,
+				DB76702A2025FD16000B384D /* Top2ViewController.swift */,
+			);
+			path = Top2;
+			sourceTree = "<group>";
+		};
 		DB78D95B1FF4F62200945BEF /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -416,6 +432,7 @@
 				DB6FF5FB2014CBD0001290A4 /* ViewController.swift */,
 				DBA597CE1FEE99DD00CC5148 /* Launch */,
 				DBA597B31FEE7A2600CC5148 /* Top */,
+				DB7670282025FD16000B384D /* Top2 */,
 				DBA597B11FEE7A2600CC5148 /* Portrait */,
 				DB6FF5F02014973C001290A4 /* Formation */,
 				E46B5A9B20083C3100E7FE30 /* FormationPortraitSelect */,
@@ -737,6 +754,7 @@
 				DBA597931FEE778800CC5148 /* Assets.xcassets in Resources */,
 				E46B5AA320083C3200E7FE30 /* FormationPortraitSelect.storyboard in Resources */,
 				DBA597911FEE778800CC5148 /* Main.storyboard in Resources */,
+				DB76702B2025FD16000B384D /* Top2.storyboard in Resources */,
 				DBEA4EB6200670D500B50408 /* UniformSelect.storyboard in Resources */,
 				E4FB60A62007041400D3DB80 /* AlertDialog.storyboard in Resources */,
 				DBF45D59200B6CE40085C408 /* ValueSelect.storyboard in Resources */,
@@ -889,6 +907,7 @@
 				DB78D97C1FF8E46100945BEF /* Formation.swift in Sources */,
 				DBA597B81FEE7A2600CC5148 /* TopViewController.swift in Sources */,
 				E449B4FB2008F801008C97ED /* Background.swift in Sources */,
+				DB76702C2025FD16000B384D /* Top2ViewController.swift in Sources */,
 				E4816236200EE6DE00E7BF3E /* UIView+Constraint.swift in Sources */,
 				DBA597C61FEE963F00CC5148 /* PortraitPresenter.swift in Sources */,
 				DBEA4EB02006705700B50408 /* UniformMenuViewController.swift in Sources */,
@@ -918,6 +937,7 @@
 				DBA597BF1FEE92A400CC5148 /* UIViewController+App.swift in Sources */,
 				E482326E20063568002C0AB3 /* UniformImageGenerator.swift in Sources */,
 				E484FE251FFF8E0900A55818 /* DialogBehavior+App.swift in Sources */,
+				DB76702E20260403000B384D /* PagingImageView.swift in Sources */,
 				E494DF02200C535000B0EC81 /* PartsSelectAdapter.swift in Sources */,
 				DB78D9631FF5DC4500945BEF /* CoreGraphics+App.swift in Sources */,
 				DB78D9581FF3D63400945BEF /* UIImage+App.swift in Sources */,

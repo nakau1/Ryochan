@@ -19,7 +19,7 @@ class FullImageGenerator {
 //            let im = UIImage.text("ああ")!
 //            im.draw(in: CGRect(CGPoint(250, 400), im.size))
         }
-        image = image.cropped(to: CGRect(280, 80, 440, 700))//450,810
+        image = image.cropped(to: CGRect(280, 0, 440, 780))//450,810
         
         //image.write(to: Path.zipDestination("test"))
         return image

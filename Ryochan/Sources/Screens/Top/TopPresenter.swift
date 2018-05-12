@@ -49,7 +49,7 @@ class TopPresenter: TopPresenterProtocol, Notificatable {
     
     @objc func loadPortraits() {
         portraits = Portrait.list()
-        thumbs = Portrait.thumbList()
+        thumbs = Portrait.fullThumbList()
         view.showPortraits()
     }
     

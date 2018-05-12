@@ -11,6 +11,7 @@
 		B2BD58F11ECC1547F7718FE4 /* Pods_Ryochan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7EDCA0B7DE1DAF85FA8C7D /* Pods_Ryochan.framework */; };
 		DB4751FD201CA85700AC32DC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4751FB201CA85600AC32DC /* MenuViewController.swift */; };
 		DB4751FE201CA85700AC32DC /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB4751FC201CA85600AC32DC /* Menu.storyboard */; };
+		DB52B7D12039CB3B0020ABBF /* FullThumbImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB52B7D02039CB3B0020ABBF /* FullThumbImageGenerator.swift */; };
 		DB6FF5F52014973D001290A4 /* Formation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB6FF5F12014973C001290A4 /* Formation.storyboard */; };
 		DB6FF5F62014973D001290A4 /* FormationStartingLineupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6FF5F22014973C001290A4 /* FormationStartingLineupPresenter.swift */; };
 		DB6FF5F82014973D001290A4 /* FormationStartingLineupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6FF5F42014973C001290A4 /* FormationStartingLineupViewController.swift */; };
@@ -18,7 +19,7 @@
 		DB6FF5FC2014CBD1001290A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6FF5FB2014CBD0001290A4 /* ViewController.swift */; };
 		DB76702B2025FD16000B384D /* Top2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB7670292025FD16000B384D /* Top2.storyboard */; };
 		DB76702C2025FD16000B384D /* Top2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB76702A2025FD16000B384D /* Top2ViewController.swift */; };
-		DB76702E20260403000B384D /* PagingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB76702D20260402000B384D /* PagingImageView.swift */; };
+		DB76702E20260403000B384D /* TopPagedPortraitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB76702D20260402000B384D /* TopPagedPortraitsView.swift */; };
 		DB78D91C1FF2C68100945BEF /* Parts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB78D91B1FF2C68100945BEF /* Parts.swift */; };
 		DB78D9361FF33ABC00945BEF /* MigrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB78D9351FF33ABC00945BEF /* MigrationManager.swift */; };
 		DB78D93A1FF3465200945BEF /* TopAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB78D9391FF3465200945BEF /* TopAdapter.swift */; };
@@ -146,6 +147,7 @@
 		D9A17D9B86329F720414783A /* Pods-RyochanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RyochanTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RyochanTests/Pods-RyochanTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DB4751FB201CA85600AC32DC /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		DB4751FC201CA85600AC32DC /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		DB52B7D02039CB3B0020ABBF /* FullThumbImageGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullThumbImageGenerator.swift; sourceTree = "<group>"; };
 		DB6FF5F12014973C001290A4 /* Formation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Formation.storyboard; sourceTree = "<group>"; };
 		DB6FF5F22014973C001290A4 /* FormationStartingLineupPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormationStartingLineupPresenter.swift; sourceTree = "<group>"; };
 		DB6FF5F42014973C001290A4 /* FormationStartingLineupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormationStartingLineupViewController.swift; sourceTree = "<group>"; };
@@ -153,7 +155,7 @@
 		DB6FF5FB2014CBD0001290A4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DB7670292025FD16000B384D /* Top2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Top2.storyboard; sourceTree = "<group>"; };
 		DB76702A2025FD16000B384D /* Top2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Top2ViewController.swift; sourceTree = "<group>"; };
-		DB76702D20260402000B384D /* PagingImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingImageView.swift; sourceTree = "<group>"; };
+		DB76702D20260402000B384D /* TopPagedPortraitsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopPagedPortraitsView.swift; sourceTree = "<group>"; };
 		DB78D91B1FF2C68100945BEF /* Parts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parts.swift; sourceTree = "<group>"; };
 		DB78D9351FF33ABC00945BEF /* MigrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationManager.swift; sourceTree = "<group>"; };
 		DB78D9391FF3465200945BEF /* TopAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAdapter.swift; sourceTree = "<group>"; };
@@ -323,7 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				DB7670292025FD16000B384D /* Top2.storyboard */,
-				DB76702D20260402000B384D /* PagingImageView.swift */,
+				DB76702D20260402000B384D /* TopPagedPortraitsView.swift */,
 				DB76702A2025FD16000B384D /* Top2ViewController.swift */,
 			);
 			path = Top2;
@@ -610,6 +612,7 @@
 				E4B550B5200909A5002A47CC /* BackgroudedImageGenerator.swift */,
 				E482326C20063568002C0AB3 /* UniformImageGenerator.swift */,
 				E4B26B4D1FFDA6F20049C137 /* FullImageGenerator.swift */,
+				DB52B7D02039CB3B0020ABBF /* FullThumbImageGenerator.swift */,
 			);
 			path = ImageGenerators;
 			sourceTree = "<group>";
@@ -701,7 +704,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "yuichi.nakayasu@gmail.com";
 				TargetAttributes = {
 					DBA597871FEE778800CC5148 = {
@@ -916,6 +919,7 @@
 				E46B5AA420083C3200E7FE30 /* PortraitListAdapter.swift in Sources */,
 				E4CA24AF2015951C001E6254 /* Definition+Dimen.swift in Sources */,
 				DBABF6D61FEEA2110064C04A /* CALayer+App.swift in Sources */,
+				DB52B7D12039CB3B0020ABBF /* FullThumbImageGenerator.swift in Sources */,
 				E4AC5BCC20059D1E00D88390 /* UniformEditPresenter.swift in Sources */,
 				DBDB8BDD1FFA27A50072A818 /* Dialog.swift in Sources */,
 				DB4751FD201CA85700AC32DC /* MenuViewController.swift in Sources */,
@@ -937,7 +941,7 @@
 				DBA597BF1FEE92A400CC5148 /* UIViewController+App.swift in Sources */,
 				E482326E20063568002C0AB3 /* UniformImageGenerator.swift in Sources */,
 				E484FE251FFF8E0900A55818 /* DialogBehavior+App.swift in Sources */,
-				DB76702E20260403000B384D /* PagingImageView.swift in Sources */,
+				DB76702E20260403000B384D /* TopPagedPortraitsView.swift in Sources */,
 				E494DF02200C535000B0EC81 /* PartsSelectAdapter.swift in Sources */,
 				DB78D9631FF5DC4500945BEF /* CoreGraphics+App.swift in Sources */,
 				DB78D9581FF3D63400945BEF /* UIImage+App.swift in Sources */,
@@ -1028,6 +1032,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1035,6 +1040,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1085,6 +1091,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1092,6 +1099,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

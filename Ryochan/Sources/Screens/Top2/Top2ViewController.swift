@@ -6,7 +6,7 @@ import UIKit
 
 class Top2ViewController: ViewController {
     
-    @IBOutlet private weak var pagingImageView: PagingImageView!
+    @IBOutlet private weak var topPagedPortraitsView: TopPagedPortraitsView!
     
     private var presenter: TopPresenterProtocol!
     
@@ -18,7 +18,7 @@ class Top2ViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        pagingImageView.dataSource = self
+        topPagedPortraitsView.pagingDelegate = self
     }
     
     override func viewDidLayout() {
@@ -30,7 +30,7 @@ class Top2ViewController: ViewController {
 extension Top2ViewController: TopViewProtocol {
     
     func showPortraits() {
-        pagingImageView.reloadData()
+        topPagedPortraitsView.reloadData()
     }
     
     func showErrorDueMinimumNumber() {
@@ -42,17 +42,25 @@ extension Top2ViewController: TopViewProtocol {
     }
 }
 
-extension Top2ViewController: PagingImageViewDataSource {
-    func pagingImageView(_ pagingImageView: PagingImageView, sizeInContainer rect: CGSize) -> CGSize? {
-        return nil
-    }
+extension Top2ViewController: TopPagedPortraitsViewPagingDelegate {
     
-    
-    func numberOfImages(in pagingImageView: PagingImageView) -> Int {
+    func numberOfImages(in topPagedPortraitsView: TopPagedPortraitsView) -> Int {
         return presenter.portraits.count
     }
     
-    func pagingImageView(_ pagingImageView: PagingImageView, imageAt index: Int) -> UIImage? {
-        return UIImage(named: "sample-portrait")
+    func topPagedPortraitsView(_ topPagedPortraitsView: TopPagedPortraitsView, imageAt index: Int) -> UIImage? {
+        return presenter.thumbs[index]
+    }
+    
+    func topPagedPortraitsView(_ topPagedPortraitsView: TopPagedPortraitsView, sizeInContainer rect: CGSize) -> CGSize? {
+        return nil
+    }
+    
+    func topPagedPortraitsViewDidStartScroll(_ topPagedPortraitsView: TopPagedPortraitsView) {
+        
+    }
+    
+    func topPagedPortraitsViewDidEndScroll(_ topPagedPortraitsView: TopPagedPortraitsView, to index: Int) {
+        
     }
 }

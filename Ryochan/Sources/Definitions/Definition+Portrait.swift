@@ -36,11 +36,9 @@ extension Path {
         return Path.documentDirectory.path("PortraitThumbs")
     }
     
-    /// 似顔絵サムネイル画像ファイルのパス
-    /// - Parameter portrait: 似顔絵オブジェクト
-    /// - Returns: 似顔絵サムネイル画像ファイルのパス
-    static func portraitThumb(_ portrait: Portrait) -> String {
-        return portraitThumbDirectory.path("\(portrait.id).png")
+    /// 似顔絵全身サムネイル用ディレクトリのパス
+    static var portraitFullThumbDirectory: String {
+        return Path.documentDirectory.path("PortraitFullThumbs")
     }
     
     /// 似顔絵画像ファイルのパス
@@ -48,6 +46,20 @@ extension Path {
     /// - Returns: 似顔絵画像ファイルのパス
     static func portraitImage(_ portrait: Portrait) -> String {
         return portraitImageDirectory.path("\(portrait.id).png")
+    }
+    
+    /// 似顔絵サムネイル画像ファイルのパス
+    /// - Parameter portrait: 似顔絵オブジェクト
+    /// - Returns: 似顔絵サムネイル画像ファイルのパス
+    static func portraitThumb(_ portrait: Portrait) -> String {
+        return portraitThumbDirectory.path("\(portrait.id).png")
+    }
+    
+    /// 似顔絵全身サムネイル画像ファイルのパス
+    /// - Parameter portrait: 似顔絵オブジェクト
+    /// - Returns: 似顔絵全身サムネイル画像ファイルのパス
+    static func portraitFullThumb(_ portrait: Portrait) -> String {
+        return portraitFullThumbDirectory.path("\(portrait.id).png")
     }
 }
 

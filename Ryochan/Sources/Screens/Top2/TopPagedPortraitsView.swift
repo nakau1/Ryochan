@@ -4,6 +4,64 @@
 
 import UIKit
 
+protocol TopPagedPortraitsViewPagingDelegate: class {
+    
+    func numberOfImages(in topPagedPortraitsView: TopPagedPortraitsView) -> Int
+    
+    func topPagedPortraitsView(_ topPagedPortraitsView: TopPagedPortraitsView, imageAt index: Int) -> UIImage?
+    
+    func topPagedPortraitsView(_ topPagedPortraitsView: TopPagedPortraitsView, sizeInContainer rect: CGSize) -> CGSize?
+    
+    func topPagedPortraitsViewDidStartScroll(_ topPagedPortraitsView: TopPagedPortraitsView)
+    
+    func topPagedPortraitsViewDidEndScroll(_ topPagedPortraitsView: TopPagedPortraitsView, to index: Int)
+}
+
+class TopPagedPortraitsView: UICollectionView, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+
+    weak var pagingDelegate: TopPagedPortraitsViewPagingDelegate?
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.delegate = self
+        self.dataSource = self
+        self.isPagingEnabled = true
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return pagingDelegate?.numberOfImages(in: self) ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! TopPagedPortraitsCell
+        cell.image = pagingDelegate?.topPagedPortraitsView(self, imageAt: indexPath.row)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return collectionView.bounds.size
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+}
+
+class TopPagedPortraitsCell: UICollectionViewCell {
+    
+    @IBOutlet private weak var portraitImageView: UIImageView!
+    
+    var image: UIImage? {
+        get {
+            return portraitImageView.image
+        }
+        set {
+            portraitImageView.image = newValue
+        }
+    }
+}
+
+/*
 protocol PagingImageViewDataSource: class {
     
     func numberOfImages(in pagingImageView: PagingImageView) -> Int
@@ -133,3 +191,4 @@ class PagingImageView: UIScrollView, UIScrollViewDelegate {
         self.didRecognizeEndScroll()
     }
 }
+*/

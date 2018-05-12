@@ -11,7 +11,7 @@ class LaunchViewController: ViewController {
         
         /// データ移行
         let manager = MigrationManager()
-        manager.storedVersion = nil // TODO: デバッグのためにnilを代入しているが本来は不要
+        //manager.storedVersion = nil // TODO: デバッグのためにnilを代入しているが本来は不要
         if manager.shouldDataMigration {
             manager.migrate()
         }

@@ -161,6 +161,10 @@ extension Portrait {
         return generateImage().scaled(to: .portraitThumb)
     }
     
+    func generateFullThumbImage() -> UIImage {
+        return FullThumbImageGenerator().generateImage(of: self, uniform: self.baseUniform)!
+    }
+    
     class func list() -> [Portrait] {
         if File.makeFileIfNeeded(to: Path.portraitsJsonFile) {
             makeDefaultList()
@@ -171,6 +175,12 @@ extension Portrait {
     class func thumbList() -> [UIImage?] {
         return list().map { portrait -> UIImage? in
             return UIImage(path: Path.portraitThumb(portrait))
+        }
+    }
+    
+    class func fullThumbList() -> [UIImage?] {
+        return list().map { portrait -> UIImage? in
+            return UIImage(path: Path.portraitFullThumb(portrait))
         }
     }
     
@@ -205,6 +215,7 @@ private extension Portrait {
     func writeImages() {
         writeImage()
         writeThumbImage()
+        writeFullThumbImage()
     }
     
     func writeImage() {
@@ -216,6 +227,11 @@ private extension Portrait {
         File.makeDirectoryIfNeeded(to: Path.portraitThumbDirectory)
         generateThumbImage().write(to: Path.portraitThumb(self))
     }
+    
+    func writeFullThumbImage() {
+        File.makeDirectoryIfNeeded(to: Path.portraitFullThumbDirectory)
+        generateFullThumbImage().write(to: Path.portraitFullThumb(self))
+    }
 }
 
 private extension Portrait {
@@ -223,6 +239,7 @@ private extension Portrait {
     func deleteImages() {
         deleteImage()
         deleteThumbImage()
+        deleteFullThumbImage()
     }
     
     func deleteImage() {
@@ -231,6 +248,10 @@ private extension Portrait {
     
     func deleteThumbImage() {
         File.deleteFile(at: Path.portraitThumb(self))
+    }
+    
+    func deleteFullThumbImage() {
+        File.deleteFile(at: Path.portraitFullThumb(self))
     }
 }
 

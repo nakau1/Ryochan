@@ -6,6 +6,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -86,9 +87,43 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VI8-Ce-6gY" customClass="PagingImageView" customModule="Ryochan" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="557.5"/>
-                            </scrollView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kWL-WY-DKC" customClass="TopPagedPortraitsView" customModule="Ryochan" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="573.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VxC-xR-YJN">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="DYe-FR-N9u" customClass="TopPagedPortraitsCell" customModule="Ryochan" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.5" width="375" height="573"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="573"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample-portrait" translatesAutoresizingMaskIntoConstraints="NO" id="Kao-w8-JRy">
+                                                    <rect key="frame" x="16" y="257" width="343" height="300"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="300" id="bfX-4d-0Mk"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Kao-w8-JRy" firstAttribute="leading" secondItem="DYe-FR-N9u" secondAttribute="leadingMargin" constant="8" id="3of-ga-Fny"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Kao-w8-JRy" secondAttribute="trailing" constant="8" id="6M5-Vd-lXn"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="Kao-w8-JRy" secondAttribute="bottom" constant="8" id="mDF-hm-z3A"/>
+                                        </constraints>
+                                        <size key="customSize" width="375" height="573"/>
+                                        <connections>
+                                            <outlet property="portraitImageView" destination="Kao-w8-JRy" id="FSp-ff-t9r"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G99-91-9xG" customClass="HighlightButton" customModule="Ryochan" customModuleProvider="target">
                                 <rect key="frame" x="81.5" y="593.5" width="65.5" height="65.5"/>
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
@@ -108,8 +143,7 @@
                         <color key="backgroundColor" red="0.19215686269999999" green="0.40000000000000002" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="G99-91-9xG" firstAttribute="bottom" secondItem="r4k-G1-ykm" secondAttribute="bottom" id="00K-yP-1RP"/>
-                            <constraint firstItem="VI8-Ce-6gY" firstAttribute="top" secondItem="JXi-fx-IQr" secondAttribute="top" constant="8" id="1HM-bS-PwC"/>
-                            <constraint firstItem="DeM-nI-Z9r" firstAttribute="top" secondItem="VI8-Ce-6gY" secondAttribute="bottom" constant="8" id="1Sx-Cz-Tfi"/>
+                            <constraint firstItem="kWL-WY-DKC" firstAttribute="top" secondItem="JXi-fx-IQr" secondAttribute="top" id="1UU-fM-HUm"/>
                             <constraint firstItem="n2q-fE-CKa" firstAttribute="height" secondItem="r4k-G1-ykm" secondAttribute="height" id="23t-a5-9y8"/>
                             <constraint firstItem="DeM-nI-Z9r" firstAttribute="width" secondItem="r4k-G1-ykm" secondAttribute="width" id="4zU-WV-4hq"/>
                             <constraint firstItem="cWc-jO-xen" firstAttribute="height" secondItem="r4k-G1-ykm" secondAttribute="height" id="5Y0-pP-ahz"/>
@@ -120,26 +154,30 @@
                             <constraint firstItem="DeM-nI-Z9r" firstAttribute="bottom" secondItem="r4k-G1-ykm" secondAttribute="bottom" id="SDI-Fb-QCz"/>
                             <constraint firstItem="cWc-jO-xen" firstAttribute="leading" secondItem="G99-91-9xG" secondAttribute="trailing" constant="8" id="TLH-nq-G5p"/>
                             <constraint firstItem="G99-91-9xG" firstAttribute="height" secondItem="r4k-G1-ykm" secondAttribute="height" id="Ueh-k1-mGh"/>
-                            <constraint firstItem="JXi-fx-IQr" firstAttribute="trailing" secondItem="VI8-Ce-6gY" secondAttribute="trailing" id="X9u-bn-9hn"/>
+                            <constraint firstItem="JXi-fx-IQr" firstAttribute="trailing" secondItem="kWL-WY-DKC" secondAttribute="trailing" id="W1I-lw-oJc"/>
                             <constraint firstItem="G99-91-9xG" firstAttribute="leading" secondItem="r4k-G1-ykm" secondAttribute="trailing" constant="8" id="ZkP-hK-eSA"/>
                             <constraint firstItem="n2q-fE-CKa" firstAttribute="leading" secondItem="cWc-jO-xen" secondAttribute="trailing" constant="8" id="anV-PL-Grg"/>
                             <constraint firstItem="r4k-G1-ykm" firstAttribute="leading" secondItem="JXi-fx-IQr" secondAttribute="leading" constant="8" id="cvn-FA-osQ"/>
-                            <constraint firstItem="VI8-Ce-6gY" firstAttribute="leading" secondItem="JXi-fx-IQr" secondAttribute="leading" id="g3l-Dj-wjX"/>
+                            <constraint firstItem="DeM-nI-Z9r" firstAttribute="top" secondItem="kWL-WY-DKC" secondAttribute="bottom" id="fap-oL-kyo"/>
                             <constraint firstItem="DeM-nI-Z9r" firstAttribute="height" secondItem="r4k-G1-ykm" secondAttribute="height" id="hv8-G2-Rnj"/>
                             <constraint firstItem="cWc-jO-xen" firstAttribute="bottom" secondItem="r4k-G1-ykm" secondAttribute="bottom" id="k6v-gv-GZD"/>
                             <constraint firstItem="DeM-nI-Z9r" firstAttribute="leading" secondItem="n2q-fE-CKa" secondAttribute="trailing" constant="8" id="rsy-kC-Gx1"/>
                             <constraint firstItem="cWc-jO-xen" firstAttribute="width" secondItem="r4k-G1-ykm" secondAttribute="width" id="soj-Fh-TpO"/>
+                            <constraint firstItem="kWL-WY-DKC" firstAttribute="leading" secondItem="JXi-fx-IQr" secondAttribute="leading" id="y6B-0i-fBA"/>
                             <constraint firstItem="n2q-fE-CKa" firstAttribute="width" secondItem="r4k-G1-ykm" secondAttribute="width" id="z0E-Ve-Neb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JXi-fx-IQr"/>
                     </view>
                     <connections>
-                        <outlet property="pagingImageView" destination="VI8-Ce-6gY" id="QM5-x5-bR1"/>
+                        <outlet property="topPagedPortraitsView" destination="kWL-WY-DKC" id="CCw-6T-MTm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e5b-yy-Jl2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-769" y="35"/>
+            <point key="canvasLocation" x="-2281" y="-76"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sample-portrait" width="640" height="640"/>
+    </resources>
 </document>

@@ -8,7 +8,7 @@ import UIKit
 extension CGFloat {
     
     /// 画面の幅
-    static let screenWidth: CGFloat = UIScreen.main.bounds.width
+    static let screenWidth: CGFloat = CGSize.screen.width
     
     /// ダイアログの幅
     static let dialogWidth: CGFloat = screenWidth - 32
@@ -19,6 +19,9 @@ extension CGFloat {
 
 /// サイズ
 extension CGSize {
+    
+    /// 画面サイズ
+    static let screen = UIScreen.main.bounds.size
     
     /// 似顔絵の生サイズ
     static let portrait = CGSize(width: 500, height: 500)
